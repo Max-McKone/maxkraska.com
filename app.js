@@ -322,6 +322,9 @@ const ARTWORKS = [
     }
 ];
 
+// Sort artworks by year descending (newest at the top)
+ARTWORKS.sort((a, b) => parseInt(b.year) - parseInt(a.year));
+
 // State variables
 let currentFilteredList = [...ARTWORKS];
 let currentLightboxIndex = 0;
