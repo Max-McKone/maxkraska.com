@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official portfolio of contemporary painter Max Kraska. Explore oil and acrylic galleries, portraits, studies, and landscapes detailing a legacy of artistic heritage starting from Fridolin M. Kraska.">
+    <title>Max Kraska — Fine Art Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Max Kraska<span>.</span></a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#biography">Biography</a></li>
+                <li><a href="#lineage">Lineage</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <p class="hero-subtitle">Emerging Contemporary Artist</p>
+            <h1 class="hero-title">Explorations in Canvas, Context, &amp; Heritage</h1>
+            <p class="hero-description">
+                A painterly vocabulary balancing structural forms and organic textures. Merging modern environments with a rich history of East German mural art and expressionism.
+            </p>
+            <div>
+                <a href="#gallery" class="btn btn-primary">Exhibition Gallery</a>
+                <a href="#biography" class="btn btn-secondary">Read Biography</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="fade-in-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Curated Exhibition</span>
+                <h2 class="section-title">Artworks &amp; Studies</h2>
+            </div>
+            
+            <!-- Category Filtering -->
+            <div class="gallery-filters-container">
+                <ul class="gallery-filters">
+                    <li><button class="filter-btn active" data-filter="all">All Works</button></li>
+                    <li><button class="filter-btn" data-filter="paintings">Paintings</button></li>
+                    <li><button class="filter-btn" data-filter="portraits">Portraits &amp; Studies</button></li>
+                    <li><button class="filter-btn" data-filter="landscapes">Landscapes &amp; Scenes</button></li>
+                </ul>
+            </div>
+
+            <!-- Dynamic Masonry Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Injected dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biography" class="fade-in-section" style="background-color: #0b0b0b;">
+        <div class="container bio-layout">
+            <div>
+                <div class="section-header">
+                    <span class="section-subtitle">The Artist</span>
+                    <h2 class="section-title">About Max Kraska</h2>
+                </div>
+                <div class="bio-text">
+                    <p>
+                        Max Kraska is an emerging contemporary painter whose atmospheric canvases navigate the boundaries of spatial structure, representation, and raw abstract texture. Working predominantly with oil and acrylic on canvas, Kraska uses structured configurations and tactile finishes to explore personal themes of environment, isolation, and movement.
+                    </p>
+                    <p>
+                        His paintings are distinguished by their balanced tension. Bold, solid forms often collide with expressive, chaotic brushwork. These elements reflect the raw visual energies of his travels through contrasting environments—from the dense, neon-lit streets of Chinatown Bangkok and Pattaya, Thailand, to the austere, historic weight of Berlin by night.
+                    </p>
+                    <p>
+                        Kraska's process focuses heavily on materiality. By layering heavy acrylic bases and fine oils, his works form physical landscapes on the canvas, transforming everyday items, portraits, and scenic views into evocative, sensory experiences.
+                    </p>
+                </div>
+            </div>
+            <div style="margin-top: 60px;">
+                <blockquote class="bio-quote">
+                    "My work attempts to capture the friction between the organic world and the structures we build around ourselves. Painting is a dialogue between legacy and the immediate moment."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lineage / Heritage Section -->
+    <section id="lineage" class="fade-in-section">
+        <div class="container bio-layout">
+            <div class="lineage-box">
+                <h3 class="lineage-title">Artistic Lineage</h3>
+                <p class="lineage-description">
+                    The creative drive is deeply embedded in Max Kraska's family tree. His grandfather was the celebrated East German painter and graphic artist <strong>Fridolin M. Kraska</strong>, who was a prominent figure in the Dessau-Roßlau art scene.
+                </p>
+                <p class="lineage-description">
+                    Fridolin M. Kraska's work often carried site-specific public relevance—most notably his commemorative mural designs for the Johanniskirche in Dessau, marking the events of the autumn of 1989. He was also known for his environmental critiques, such as his monumental work <em>Blaue Wald</em> (Blue Forest), which served as an ironic commentary on the exploitation of rainforest resources.
+                </p>
+                <div class="lineage-highlight">
+                    <p class="lineage-meta">A Legacy of Creative Expression</p>
+                    <p class="lineage-subject">Fridolin M. Kraska (1921 — 1989)</p>
+                </div>
+            </div>
+            <div>
+                <div class="section-header">
+                    <span class="section-subtitle">Historical Connection</span>
+                    <h2 class="section-title">Bridging Two Eras</h2>
+                </div>
+                <div class="bio-text">
+                    <p>
+                        While Fridolin M. Kraska’s work operated within the social and environmental commentary of 20th-century East Germany, Max Kraska expands this legacy into a globalized, 21st-century context. 
+                    </p>
+                    <p>
+                        The artistic lineage manifests not in duplication, but in a shared reverence for critical space and structural scale. The bold lines, layered textures, and monumental canvases like <em>Down Time (2m x 4m)</em> and <em>Tipping Point (4m x 2m)</em> serve as a physical dialogue across generations, translating a heritage of public murals into contemporary interior horizons.
+                    </p>
+                    <p>
+                        Through this continuation of the Kraska name, the canvas becomes more than a visual plane—it functions as a bridge connecting Dessau, Berlin, and the tropical landscapes of Southeast Asia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in-section" style="background-color: #0b0b0b;">
+        <div class="container contact-layout">
+            <div class="section-header">
+                <span class="section-subtitle">Inquiries &amp; Studio</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <p class="contact-text">
+                For sales, commissions, exhibition opportunities, or general studio inquiries regarding the works of Max Kraska, please reach out via email or follow on social media.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:max.mckone@googlemail.com" class="contact-item">
+                    <span>Email</span> &mdash; max.mckone@googlemail.com
+                </a>
+                <a href="https://instagram.com/max_mckone_art" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <span>Instagram</span> &mdash; @max_mckone_art
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Max Kraska<span>.</span></div>
+            <div class="footer-copy">&copy; 2026 Max Kraska. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork expansion view">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous Image">&lsaquo;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next Image">&rsaquo;</button>
+        
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title">Artwork Title</h3>
+                <p class="lightbox-details" id="lightbox-meta">Medium &bull; Dimensions &bull; Year</p>
+            </div>
+            
+            <div class="lightbox-mobile-controls">
+                <button class="lightbox-mobile-btn" id="mobile-prev" aria-label="Previous image">&lsaquo;</button>
+                <button class="lightbox-mobile-btn" id="mobile-next" aria-label="Next image">&rsaquo;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
