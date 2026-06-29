@@ -15,6 +15,7 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 # Register correct web font MIME types (highly important for Safari / Chrome security checks)
 Handler = CustomHTTPRequestHandler
 Handler.extensions_map.update({
+    '.ico': 'image/x-icon',
     '.otf': 'font/otf',
     '.woff': 'font/woff',
     '.woff2': 'font/woff2',
