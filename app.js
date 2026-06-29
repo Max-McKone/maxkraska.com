@@ -33,8 +33,8 @@ const ARTWORKS = [
         dimensions: "200 x 400 cm"
     },
     {
-        filename: "IMG_6938.jpeg",
-        title: "Untitled",
+        filename: "sword_of_damocles.jpeg",
+        title: "Sword of Damocles",
         category: "paintings",
         year: "2026",
         medium: "Oil, acrylic on canvas",
@@ -72,14 +72,7 @@ const ARTWORKS = [
         medium: "Oil, acrylic on canvas",
         dimensions: "400 x 200 cm"
     },
-    {
-        filename: "abstractdog.png",
-        title: "Abstract Dog",
-        category: "paintings",
-        year: "2026",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
+
     {
         filename: "apoorv_bkk.jpeg",
         title: "Apoorv in Bangkok",
@@ -96,22 +89,7 @@ const ARTWORKS = [
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
-    {
-        filename: "bust(5).jpg",
-        title: "Bust V",
-        category: "paintings",
-        year: "2021",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
-    {
-        filename: "bust1.JPG",
-        title: "Bust I",
-        category: "paintings",
-        year: "2019",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
+
     {
         filename: "cheese_plat(updated).jpg",
         title: "Cheese Platter",
@@ -125,30 +103,6 @@ const ARTWORKS = [
         title: "Chinatown Bangkok",
         category: "landscapes",
         year: "2026",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
-    {
-        filename: "constant_root1.png",
-        title: "Constant Root I",
-        category: "paintings",
-        year: "2021",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
-    {
-        filename: "constant_root2.png",
-        title: "Constant Root II",
-        category: "paintings",
-        year: "2021",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
-    {
-        filename: "constant_root3.png",
-        title: "Constant Root III",
-        category: "paintings",
-        year: "2021",
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
@@ -200,22 +154,7 @@ const ARTWORKS = [
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
-    {
-        filename: "objectcarpetpainting(2).png",
-        title: "Object Carpet Painting II",
-        category: "paintings",
-        year: "2026",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
-    {
-        filename: "objectpaintingcarpet.JPG",
-        title: "Object Painting Carpet",
-        category: "paintings",
-        year: "2019",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
+
     {
         filename: "oldboys.JPG",
         title: "Old Boys",
@@ -304,19 +243,68 @@ const ARTWORKS = [
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
+
     {
-        filename: "trappedpeople(edited).JPG",
-        title: "Trapped People",
+        filename: "tropicalplants(edited).JPG",
+        title: "Tropical Plants",
         category: "paintings",
         year: "2018",
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
     {
-        filename: "tropicalplants(edited).JPG",
-        title: "Tropical Plants",
+        filename: "nike_still_life.jpeg",
+        title: "Nike Still Life",
         category: "paintings",
-        year: "2018",
+        year: "2026",
+        medium: "Oil, acrylic on canvas",
+        dimensions: "30 x 40 cm"
+    },
+    {
+        filename: "puebla_lucia.jpeg",
+        title: "Puebla Lucia",
+        category: "portraits",
+        year: "2026",
+        medium: "Oil, acrylic on canvas",
+        dimensions: "30 x 40 cm"
+    },
+    {
+        filename: "savage_dogs.JPG",
+        title: "Savage Dogs",
+        category: "paintings",
+        year: "2021",
+        medium: "Oil, acrylic on canvas",
+        dimensions: "30 x 40 cm"
+    },
+    {
+        filename: "computer.jpg",
+        title: "Computer",
+        category: "paintings",
+        year: "2021",
+        medium: "Oil, acrylic on canvas",
+        dimensions: "30 x 40 cm"
+    },
+    {
+        filename: "tangier.jpeg",
+        title: "Tangier",
+        category: "landscapes",
+        year: "2026",
+        medium: "Oil, acrylic on canvas",
+        dimensions: "30 x 40 cm"
+    },
+    {
+        filename: "thai_gold1.jpeg",
+        title: "Thai Gold I",
+        category: "landscapes",
+        year: "2026",
+        medium: "Oil, acrylic on canvas",
+        dimensions: "30 x 40 cm"
+    },
+    {
+        filename: "thai_gold2.jpeg",
+        title: "Thai Gold II",
+        category: "landscapes",
+        year: "2026",
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     }
@@ -355,17 +343,18 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
     initHeaderScroll();
     initKeyboardNavigation();
+    heroTitleMorph();
 });
 
 // Render the grid elements dynamically
 function renderGallery() {
     galleryGrid.innerHTML = "";
-    
+
     currentFilteredList.forEach((item, index) => {
         const gridItem = document.createElement("div");
         gridItem.className = "gallery-item";
         gridItem.setAttribute("data-category", item.category);
-        
+
         gridItem.innerHTML = `
             <div class="gallery-image-wrapper">
                 <img src="assets/${item.filename}" alt="${item.title}" loading="lazy">
@@ -383,14 +372,14 @@ function renderGallery() {
                 </div>
             </div>
         `;
-        
+
         // Open lightbox on click
         gridItem.addEventListener("click", () => {
             openLightbox(index);
         });
-        
+
         galleryGrid.appendChild(gridItem);
-        
+
         // Trigger reflow & fade in
         setTimeout(() => {
             gridItem.classList.add("show");
@@ -403,17 +392,17 @@ function initFilters() {
     filterButtons.forEach(button => {
         button.addEventListener("click", () => {
             const filterValue = button.getAttribute("data-filter");
-            
+
             // Toggle active state
             filterButtons.forEach(btn => btn.classList.remove("active"));
             button.classList.add("active");
-            
+
             // Animate items out first
             const items = document.querySelectorAll(".gallery-item");
             items.forEach(item => {
                 item.classList.remove("show");
             });
-            
+
             setTimeout(() => {
                 if (filterValue === "all") {
                     currentFilteredList = [...ARTWORKS];
@@ -499,12 +488,12 @@ function showNextImage() {
 function animateLightboxTransition() {
     const img = lightboxImg;
     const info = document.querySelector(".lightbox-info");
-    
+
     // Quick fade out
     img.style.opacity = "0";
     img.style.transform = "scale(0.97)";
     info.style.opacity = "0";
-    
+
     setTimeout(() => {
         updateLightboxContent();
         // Fade back in
@@ -519,13 +508,13 @@ function updateLightboxContent() {
     lightboxImg.src = `assets/${item.filename}`;
     lightboxImg.alt = item.title;
     lightboxTitle.textContent = item.title;
-    
+
     lightboxMeta.innerHTML = `
         <span>${item.medium}</span> &bull; 
         <span>${item.dimensions}</span> &bull; 
         <span>${item.year}</span>
     `;
-    
+
     // Preload adjacent images for smooth navigation
     preloadAdjacentImages();
 }
@@ -533,10 +522,10 @@ function updateLightboxContent() {
 function preloadAdjacentImages() {
     const nextIndex = (currentLightboxIndex + 1) % currentFilteredList.length;
     const prevIndex = (currentLightboxIndex - 1 + currentFilteredList.length) % currentFilteredList.length;
-    
+
     const nextImg = new Image();
     nextImg.src = `assets/${currentFilteredList[nextIndex].filename}`;
-    
+
     const prevImg = new Image();
     prevImg.src = `assets/${currentFilteredList[prevIndex].filename}`;
 }
@@ -545,7 +534,7 @@ function preloadAdjacentImages() {
 function initKeyboardNavigation() {
     document.addEventListener("keydown", (e) => {
         if (!lightbox.classList.contains("open")) return;
-        
+
         if (e.key === "Escape") {
             closeLightbox();
         } else if (e.key === "ArrowLeft") {
@@ -561,7 +550,7 @@ function initMobileMenu() {
     menuToggle.addEventListener("click", () => {
         isMobileMenuOpen = !isMobileMenuOpen;
         navLinks.classList.toggle("open", isMobileMenuOpen);
-        
+
         // Animate hamburger to X
         const spans = menuToggle.querySelectorAll("span");
         if (isMobileMenuOpen) {
@@ -589,31 +578,42 @@ function initMobileMenu() {
     });
 }
 
-// Shrink header on scroll
+// Show header only after scrolling past the hero section
 function initHeaderScroll() {
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
+    const hero = document.getElementById('home');
+
+    function updateHeader() {
+        const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : window.innerHeight;
+        const pastHero = window.scrollY >= heroBottom - 80; // 80px early trigger
+
+        if (pastHero) {
+            header.classList.remove('nav-hidden');
+            header.classList.add('scrolled');
         } else {
-            header.classList.remove("scrolled");
+            header.classList.add('nav-hidden');
+            header.classList.remove('scrolled');
         }
-        
-        // Highlight active navigation link based on section scroll depth
+
         highlightActiveSection();
-    });
+    }
+
+    // Start hidden
+    header.classList.add('nav-hidden');
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
 }
 
 function highlightActiveSection() {
     const sections = document.querySelectorAll("section, header");
     const navItems = document.querySelectorAll(".nav-links a");
-    
+
     let scrollPos = window.scrollY + 100;
-    
+
     sections.forEach(section => {
         if (section.id) {
             const top = section.offsetTop;
             const height = section.offsetHeight;
-            
+
             if (scrollPos >= top && scrollPos < top + height) {
                 navItems.forEach(item => {
                     item.classList.remove("active");
@@ -629,13 +629,13 @@ function highlightActiveSection() {
 // Scroll fade-in observer (Intersection Observer)
 function initScrollAnimations() {
     const fadeSections = document.querySelectorAll(".fade-in-section");
-    
+
     const observerOptions = {
         root: null,
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     };
-    
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -644,8 +644,79 @@ function initScrollAnimations() {
             }
         });
     }, observerOptions);
-    
+
     fadeSections.forEach(section => {
         observer.observe(section);
     });
 }
+
+// =====================================================
+// Hero Title Morph Animation
+// =====================================================
+function heroTitleMorph() {
+    const title = document.getElementById('hero-title-morph');
+    if (!title) return;
+
+    const layers = Array.from(title.querySelectorAll('.hero-title-layer'));
+    if (layers.length === 0) return;
+
+    const HOLD_MS = 1400;  // ms each variant is fully visible
+    const FADE_MS = 700;   // ms crossfade between variants
+
+    let currentIndex = 0;
+    let phase = 'hold'; // 'hold' | 'fade'
+    let phaseStart = null;
+    let rafId = null;
+
+    // Ease in-out sine for smooth crossfade
+    function easeInOutSine(t) {
+        return -(Math.cos(Math.PI * t) - 1) / 2;
+    }
+
+    // Initialise: show first layer only
+    layers.forEach((l, i) => { l.style.opacity = i === 0 ? '1' : '0'; });
+
+    function tick(ts) {
+        if (phaseStart === null) phaseStart = ts;
+        const elapsed = ts - phaseStart;
+
+        if (phase === 'hold') {
+            if (elapsed >= HOLD_MS) {
+                phase = 'fade';
+                phaseStart = ts;
+            }
+        } else {
+            const t = Math.min(elapsed / FADE_MS, 1);
+            const ease = easeInOutSine(t);
+            const next = (currentIndex + 1) % layers.length;
+
+            layers[currentIndex].style.opacity = String(1 - ease);
+            layers[next].style.opacity = String(ease);
+
+            if (t >= 1) {
+                layers[currentIndex].style.opacity = '0';
+                layers[next].style.opacity = '1';
+                currentIndex = next;
+                phase = 'hold';
+                phaseStart = ts;
+            }
+        }
+
+        rafId = requestAnimationFrame(tick);
+    }
+
+    rafId = requestAnimationFrame(tick);
+
+    // Pause when tab is hidden to save CPU / battery
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+        } else if (!rafId) {
+            phaseStart = null;
+            rafId = requestAnimationFrame(tick);
+        }
+    });
+}
+
+

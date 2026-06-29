@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official portfolio of contemporary painter Max Kraska. Explore oil and acrylic galleries, portraits, studies, and landscapes detailing a legacy of artistic heritage starting from Fridolin M. Kraska.">
-    <title>Max Kraska — Fine Art Portfolio</title>
+    <meta name="description"
+        content="Official portfolio of contemporary painter Max Kraska. Explore oil and acrylic galleries, portraits, studies, and landscapes detailing a legacy of artistic heritage starting from Fridolin M. Kraska.">
+    <title>Max Kraska — Art Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Header Navigation -->
@@ -22,7 +26,6 @@
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#biography">Biography</a></li>
-                <li><a href="#lineage">Lineage</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -31,9 +34,25 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1 class="hero-title">Max Kraska</h1>
+            <h1 class="hero-title" id="hero-title-morph">
+                <span class="hero-title-layer" data-variant="serif-light">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="serif-light-italic">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="serif-regular">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="serif-regular-italic">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="serif-bold">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="serif-bold-italic">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="glare-light">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="glare-light-italic">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="glare-bold">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="glare-bold-italic">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="sans-light">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="sans-light-italic">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="sans-regular">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="sans-bold">Max Kraska</span>
+                <span class="hero-title-layer" data-variant="sans-bold-italic">Max Kraska</span>
+            </h1>
             <p class="hero-description">
-                Contemporary painting bridging historical lineage and modern spaces.
+                Contemporary painting of age old topics.
             </p>
             <div>
                 <a href="#gallery" class="btn btn-primary">Gallery</a>
@@ -53,7 +72,7 @@
                 <span class="section-subtitle">Curated Exhibition</span>
                 <h2 class="section-title">Artworks &amp; Studies</h2>
             </div>
-            
+
             <!-- Category Filtering -->
             <div class="gallery-filters-container">
                 <ul class="gallery-filters">
@@ -71,7 +90,7 @@
         </div>
     </section>
 
-    <!-- Biography Section -->
+    <!-- Biography & Lineage Section (merged) -->
     <section id="biography" class="fade-in-section" style="background-color: #0b0b0b;">
         <div class="container bio-layout">
             <div>
@@ -97,11 +116,9 @@
                 </blockquote>
             </div>
         </div>
-    </section>
 
-    <!-- Lineage / Heritage Section -->
-    <section id="lineage" class="fade-in-section">
-        <div class="container bio-layout">
+        <!-- Lineage sub-section -->
+        <div class="container bio-layout" style="margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--border);">
             <div class="lineage-box">
                 <h3 class="lineage-title">Artistic Lineage</h3>
                 <p class="lineage-description">
@@ -122,7 +139,7 @@
                 </div>
                 <div class="bio-text">
                     <p>
-                        While Fridolin M. Kraska’s work operated within the social and environmental commentary of 20th-century East Germany, Max Kraska expands this legacy into a globalized, 21st-century context. 
+                        While Fridolin M. Kraska's work operated within the social and environmental commentary of 20th-century East Germany, Max Kraska expands this legacy into a globalized, 21st-century context.
                     </p>
                     <p>
                         The artistic lineage manifests not in duplication, but in a shared reverence for critical space and structural scale. The bold lines, layered textures, and monumental canvases like <em>Down Time (2m x 4m)</em> and <em>Tipping Point (4m x 2m)</em> serve as a physical dialogue across generations, translating a heritage of public murals into contemporary interior horizons.
@@ -143,13 +160,15 @@
                 <h2 class="section-title">Get In Touch</h2>
             </div>
             <p class="contact-text">
-                For sales, commissions, exhibition opportunities, or general studio inquiries regarding the works of Max Kraska, please reach out via email or follow on social media.
+                For sales, commissions, exhibition opportunities, or general studio inquiries regarding the works of Max
+                Kraska, please reach out via email or follow on social media.
             </p>
             <div class="contact-links">
                 <a href="mailto:max.mckone@googlemail.com" class="contact-item">
                     <span>Email</span> &mdash; max.mckone@googlemail.com
                 </a>
-                <a href="https://instagram.com/max_mckone_art" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <a href="https://instagram.com/max_mckone_art" target="_blank" rel="noopener noreferrer"
+                    class="contact-item">
                     <span>Instagram</span> &mdash; @max_mckone_art
                 </a>
             </div>
@@ -167,20 +186,20 @@
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork expansion view">
         <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
-        
+
         <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous Image">&lsaquo;</button>
         <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next Image">&rsaquo;</button>
-        
+
         <div class="lightbox-content">
             <div class="lightbox-image-container">
                 <img id="lightbox-img" src="" alt="">
             </div>
-            
+
             <div class="lightbox-info">
                 <h3 class="lightbox-title" id="lightbox-title">Artwork Title</h3>
                 <p class="lightbox-details" id="lightbox-meta">Medium &bull; Dimensions &bull; Year</p>
             </div>
-            
+
             <div class="lightbox-mobile-controls">
                 <button class="lightbox-mobile-btn" id="mobile-prev" aria-label="Previous image">&lsaquo;</button>
                 <button class="lightbox-mobile-btn" id="mobile-next" aria-label="Next image">&rsaquo;</button>
@@ -191,4 +210,5 @@
     <!-- Scripts -->
     <script src="app.js"></script>
 </body>
+
 </html>
