@@ -12,7 +12,7 @@ const ARTWORKS = [
         filename: "Ancestry.PNG",
         title: "Ancestry",
         category: "paintings",
-        year: "2026",
+        year: "2019",
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
@@ -28,7 +28,7 @@ const ARTWORKS = [
         filename: "DownTime(2m x 4m).jpg",
         title: "Down Time",
         category: "paintings",
-        year: "2026",
+        year: "2024",
         medium: "Oil, acrylic on canvas",
         dimensions: "200 x 400 cm"
     },
@@ -52,7 +52,7 @@ const ARTWORKS = [
         filename: "NightCats.PNG",
         title: "Night Cats",
         category: "paintings",
-        year: "2026",
+        year: "2022",
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
@@ -96,7 +96,7 @@ const ARTWORKS = [
         category: "paintings",
         year: "2021",
         medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
+        dimensions: "60 x 80 cm"
     },
     {
         filename: "china_town_bangkok.jpeg",
@@ -128,7 +128,7 @@ const ARTWORKS = [
         category: "paintings",
         year: "2021",
         medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
+        dimensions: "60 x 40 cm"
     },
     {
         filename: "hit_marker.jpeg",
@@ -146,15 +146,6 @@ const ARTWORKS = [
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
-    {
-        filename: "lyrique_portrait.jpeg",
-        title: "Lyrique Portrait",
-        category: "portraits",
-        year: "2026",
-        medium: "Oil, acrylic on canvas",
-        dimensions: "30 x 40 cm"
-    },
-
     {
         filename: "oldboys.JPG",
         title: "Old Boys",
@@ -256,7 +247,7 @@ const ARTWORKS = [
         filename: "nike_still_life.jpeg",
         title: "Nike Still Life",
         category: "paintings",
-        year: "2026",
+        year: "2024",
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
@@ -264,7 +255,7 @@ const ARTWORKS = [
         filename: "puebla_lucia.jpeg",
         title: "Puebla Lucia",
         category: "portraits",
-        year: "2026",
+        year: "2025",
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
@@ -288,7 +279,7 @@ const ARTWORKS = [
         filename: "tangier.jpeg",
         title: "Tangier",
         category: "landscapes",
-        year: "2026",
+        year: "2025",
         medium: "Oil, acrylic on canvas",
         dimensions: "30 x 40 cm"
     },
